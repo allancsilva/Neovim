@@ -1,0 +1,44 @@
+_______       _         ___    _______       _         ___    _______       _         ________________
+    _______       _         ___     _______       _         ___     _______       _         ___
+_______       _         ___     _______       _         ___     _______       _         ___
+   
+   _______       _         ___    _______       _         ___    _______       _         ___
+    _______       _         ___     _______       _         ___     _______       _         ___
+__       _         ___     _______       _         ___     _______       _         ___          ___       
+ _______       _         ___       _______       _         ___     _______       _         ___ _______        
+                                                                  __________                    __      
+_______       _         ___    _______       _         ___    _______       _         ___      _______        
+    _______       _         ___     _______       _         ___     _______       _         ____        
+_______       _         ___     _______       _         ___                          _______    ______  
+_______       _      ██╗     ██╗   ██╗ █████╗     ██╗   ██╗██╗███╗   ███╗_   __    ____  ____________             
+  _______       _    ██║     ██║   ██║██╔══██╗    ██║   ██║██║████╗ ████║ 
+____       _         ██║     ██║   ██║███████║    ██║   ██║██║██╔████╔██║ __       _    __       _                         
+___       _          ██║     ██║   ██║██╔══██║    ╚██╗ ██╔╝██║██║╚██╔╝██║___                           
+_____________________███████╗╚██████╔╝██║  ██║     ╚████╔╝ ██║██║ ╚═╝ ██║_____________ |  2021  |  ____                          
+_______       _      ╚══════╝ ╚═════╝ ╚═╝  ╚═╝      ╚═══╝  ╚═╝╚═╝     ╚═╝                           
+   _______                                                               _____________________                  
+   _______ __       _           __       _   @LLAN   NEOVIM                     
+_______       _                                   LUA      PROJETO NEOVIM    ____          ________ ___                   
+                                             2021   
+_______       _         ___    _______       _         ___    _______       _         ___
+    _______       _         ___     _______       _         ___     _______       _         ___
+_______       _         ___     _______       _         ___     _______       _         ___ ___________
+
+
+
+
+  Ativando o Packer
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nv
+
+
+  Colorscheme
+  INSTALL_PATH=$HOME/.local/share/nvim/site/pack/colors/start
+  rm -rf $PREFIX/share/nvim/runtime/colors/*
+
+    git clone --depth 1 https://github.com/wadackel/vim-dogrun $INSTALL_PATH/dogrun
+    git clone --depth 1 https://github.com/arcticicestudio/nord-vim $INSTALL_PATH/nord
+    git clone --depth 1 https://github.com/mhartington/oceanic-next $INSTALL_PATH/oceanic-next
+    git clone --depth 1 https://github.com/ful1e5/onedark.nvim $INSTALL_PATH/onedark
+    git clone --depth 1 https://github.com/srcery-colors/srcery-vim $INSTALL_PATH/srcery-vim
+
+
