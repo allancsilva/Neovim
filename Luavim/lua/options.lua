@@ -21,12 +21,12 @@ opt.lazyredraw  = true
 opt.updatetime = 250
 opt.ttyfast = true
 
-opt.showmode  = false
+opt.showmode  = true
 opt.showcmd  = false
 opt.wildmenu  = true
 opt.cmdheight  = 1
 opt.timeoutlen = 200
-opt.shortmess = opt.shortmess + 'c'
+--opt.shortmess = opt.shortmess + 'c'
 opt.completeopt = {'menuone', 'longest'}
 opt.pumheight = 14
 opt.pumblend = 20
@@ -59,7 +59,5 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.undofile = true
-
-
 
 require('utils.autocmds')
