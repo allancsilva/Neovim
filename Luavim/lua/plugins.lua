@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   --color
   use 'folke/tokyonight.nvim'
   --use 'ful1e5/onedark.nvim'
+  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   --ui
   use 'glepnir/dashboard-nvim'

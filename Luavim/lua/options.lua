@@ -2,7 +2,9 @@ local cmd = vim.cmd
 local opt = vim.opt
 
 require('config.ui.colors')
-cmd('colorscheme tokyonight')
+--cmd('colorscheme tokyonight')
+cmd('colorscheme gruvbox')
+
 
 opt.termguicolors = true
 opt.background  = 'dark'

@@ -14,13 +14,13 @@
 
 -- Modulos
 -- Speed Neovim
-require('utils.disabled')
+--require('utils.disabled')
 
 -- Configuraçoes gerais
 require('plugins')
 require('options')
-require('keymaps')
-require('config.core')
+require('mappings')
+--require('config.core')
 
 -- Projeto baseado no Nvimfy
 -- Fonte : https://github.com/AyeSpacey/Nvimfy

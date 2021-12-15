@@ -1,6 +1,6 @@
 -- UI
 require('config.ui.bufferline')
-require('config.ui.dashboard')
+--require('config.ui.dashboard')
 require('config.ui.statusline')
 --require('config.ui.startify')
 
@@ -13,7 +13,7 @@ require('config.tools.todo')
 --require('config.tools.menu')
 
 -- Lsp
-require('config.lsp')
+--require('config.lsp')
 
 -- Misc
 require('colorizer').setup()
