@@ -34,10 +34,7 @@ require('autosave').setup({
   }
 })
 
-require('neoscroll').setup({
-  hide_cursor = true,
-  cursor_scrolls_alone = true
-})
+
 
 require("indent_blankline").setup {
   indentLine_enabled = 1,

@@ -11,8 +11,8 @@ return require('packer').startup(function()
 
   --ui
   --use 'glepnir/dashboard-nvim'
-  --use 'akinsho/bufferline.nvim'
-  --use 'glepnir/galaxyline.nvim'
+  use 'akinsho/bufferline.nvim'
+  use 'glepnir/galaxyline.nvim'
 
   --tools
   use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
@@ -41,10 +41,10 @@ return require('packer').startup(function()
   use 'mg979/vim-visual-multi'
 
   --enhance/optional
---  use 'lukas-reineke/indent-blankline.nvim'
--- use 'norcalli/nvim-colorizer.lua'
--- use 'p00f/nvim-ts-rainbow'
---  use 'karb94/neoscroll.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'p00f/nvim-ts-rainbow'
+  use 'karb94/neoscroll.nvim'
 
   --auto
   use 'windwp/nvim-autopairs'
