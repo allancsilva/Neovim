@@ -1,13 +1,17 @@
 local cmd = vim.cmd
 local opt = vim.opt
 
-require('config.ui.colors')
+--require('config.ui.colors')
 --cmd('colorscheme tokyonight')
-cmd('colorscheme gruvbox')
+
+
+cmd([[ colorscheme onedark ]])
 
 
 opt.termguicolors = true
 opt.background  = 'dark'
+
+
 
 opt.syntax  = 'on'
 opt.number  = true
@@ -63,3 +67,15 @@ opt.swapfile = false
 opt.undofile = true
 
 require('utils.autocmds')
+
+-- automatizar o :PackerCompile
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
+
+
+
+

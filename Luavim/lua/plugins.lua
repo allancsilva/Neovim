@@ -1,38 +1,35 @@
-require('packer').init({
-  compile_path = '~/.local/share/nvim/plugin/packer_compiled.lua',
-  display = {
-    non_interactive = false,
-    open_fn  = require('packer.util').float,
-    show_all_info = false,
-    prompt_border = 'single',
-  },
+vim.cmd [[packadd packer.nvim]]
 
-})
-return require('packer').startup(function(use)
+return require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
 
   --color
-  use 'folke/tokyonight.nvim'
-  --use 'ful1e5/onedark.nvim'
-  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  --use 'folke/tokyonight.nvim'
+  --use 'nvim-colorizer.lua'
+  use 'navarasu/onedark.nvim'
 
   --ui
-  use 'glepnir/dashboard-nvim'
-  use 'akinsho/bufferline.nvim'
-  use 'glepnir/galaxyline.nvim'
+  --use 'glepnir/dashboard-nvim'
+  --use 'akinsho/bufferline.nvim'
+  --use 'glepnir/galaxyline.nvim'
 
   --tools
-  use 'kyazdani42/nvim-tree.lua'
+  use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
+    config = function() require'nvim-tree'.setup {} 
+    end
+}
+ -- use 'kyazdani42/nvim-tree.lua'
   use 'akinsho/toggleterm.nvim'
-  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'},{'kyazdani42/nvim-web-devicons'}} }
+  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'},
+                                                     {'kyazdani42/nvim-web-devicons'}} }
 
   --syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'plasticboy/vim-markdown', opt = true, ft = {'markdown'} }
 
   --git
-  use 'lewis6991/gitsigns.nvim'
+  --use 'lewis6991/gitsigns.nvim'
 
   --workspace
   use 'Pocco81/AutoSave.nvim'
@@ -55,23 +52,23 @@ return require('packer').startup(function(use)
   use { 'AndrewRadev/tagalong.vim', ft = {'html'} }
 
   --lsp
-  use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind-nvim'
-  use 'williamboman/nvim-lsp-installer'
+  --use 'neovim/nvim-lspconfig'
+  --use 'onsails/lspkind-nvim'
+  --use 'williamboman/nvim-lsp-installer'
 
   --snip
-  use 'hrsh7th/vim-vsnip'
-  use 'rafamadriz/friendly-snippets'
+  --use 'hrsh7th/vim-vsnip'
+  --use 'rafamadriz/friendly-snippets'
 
   --completion
-  use { 'hrsh7th/nvim-cmp',
-        requires = {
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'hrsh7th/cmp-path'},
-          {'hrsh7th/cmp-buffer'},
-          {'hrsh7th/cmp-vsnip'},
-        }
-      }
+  --use { 'hrsh7th/nvim-cmp',
+  --      requires = {
+  --        {'hrsh7th/cmp-nvim-lsp'},
+  --        {'hrsh7th/cmp-path'},
+  --        {'hrsh7th/cmp-buffer'},
+  --        {'hrsh7th/cmp-vsnip'},
+  --      }
+  --    }
 
 end
 )

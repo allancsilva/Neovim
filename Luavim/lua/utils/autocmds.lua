@@ -27,7 +27,10 @@ local autocmds = {
   numbers = {
  --   { 'InsertEnter', '*', ':set norelativenumber' },
  --   { 'InsertLeave', '*', ':set relativenumber' }
-  }
+  };
+  restore_cursor = {
+    { 'BufRead', '*', [[call setpos(".", getpos("'\""))]] };
+  };
 
 }
 
