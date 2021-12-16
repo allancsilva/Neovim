@@ -1,7 +1,9 @@
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Packer ----------------------------------------------------------------------------------------
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-
   use 'wbthomason/packer.nvim'
 
   --color
@@ -44,7 +46,7 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'p00f/nvim-ts-rainbow'
-  use 'karb94/neoscroll.nvim'
+  --use 'karb94/neoscroll.nvim'
 
   --auto
   use 'windwp/nvim-autopairs'
@@ -57,8 +59,8 @@ return require('packer').startup(function()
   --use 'williamboman/nvim-lsp-installer'
 
   --snip
-  --use 'hrsh7th/vim-vsnip'
-  --use 'rafamadriz/friendly-snippets'
+  use 'hrsh7th/vim-vsnip'
+  use 'rafamadriz/friendly-snippets'
 
   --completion
   --use { 'hrsh7th/nvim-cmp',
@@ -78,20 +80,17 @@ end
 -- trouble.nvim
 -- lsp-colors.nvim
 -- formatter.nvim
-
 -- rest.nvim
 -- nvim-jqx
-
 -- auto-session
 -- sidebar.nvim
 -- nvim-gps
 -- TrueZen
 -- twilight.nvim
 -- nvim-spectre
-
 -- octo.nvim
-
 -- sneak
 -- mathup
 -- register
 -- vCoolor
+
