@@ -18,9 +18,9 @@ vim.cmd([[ vnoremap <C-b> <Esc>:NvimTreeToggle<CR> ]])
 
 
 
-vim.cmd([[ nnoremap <C-Tab> :w<CR> ]])
-vim.cmd([[ inoremap <C-Tab> <Esc>:w<CR>l ]])
-vim.cmd([[ vnoremap <C-Tab> <Esc>:w<CR> ]])
+--vim.cmd([[ nnoremap <C-Tab> :w<CR> ]])
+--vim.cmd([[ inoremap <C-Tab> <Esc>:w<CR>l ]])
+--vim.cmd([[ vnoremap <C-Tab> <Esc>:w<CR> ]])
 
 
 vim.cmd([[ nnoremap <A-1> :BufferLineGoToBuffer 1<CR> ]])
