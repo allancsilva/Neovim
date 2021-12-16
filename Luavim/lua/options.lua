@@ -1,8 +1,19 @@
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Opções Gerais ---------------------------------------------------------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
-local cmd = vim.cmd
-local opt = vim.opt
+-- Neovim API aliases
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- local map = vim.api.nvim_set_keymap  -- set global keymap 
+local cmd = vim.cmd     				-- execute Vim commands
+local exec = vim.api.nvim_exec 	-- execute Vimscript
+local fn = vim.fn       				-- call Vim functions
+local g = vim.g         				-- global variables
+local opt = vim.opt         		-- global/buffer/windows-scoped options
+
+g.mapleader = ','               -- change leader to a comma
+opt.mouse = 'a'                 -- enable mouse support
+opt.clipboard = 'unnamedplus'   -- copy/paste to system clipboard
+opt.swapfile = false            -- don't use swapfile
 
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
@@ -25,8 +36,6 @@ opt.mouse  = 'nv'
 opt.scrolloff  = 6
 opt.sidescrolloff  = 6
 opt.laststatus = 2
-opt.hidden = true
-opt.lazyredraw  = true
 opt.updatetime = 250
 opt.ttyfast = true
 opt.showmode  = true
@@ -60,19 +69,65 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.undofile = true
+opt.hidden = true         -- enable background buffers
+opt.history = 100         -- remember n lines in history
+opt.lazyredraw = true     -- faster scrolling
+opt.synmaxcol = 240       -- max column for syntax highlight
 
-require('utils.autocmds')
-
+-- require('utils.autocmds')
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- remove line lenght marker for selected filetypes
+cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- 2 spaces for selected filetypes
+cmd [[
+  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
+]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Terminal --------------------------------------------------------------------------------------
+-- open a terminal pane on the right using :Term
+cmd [[command Term :botright vsplit term://$SHELL]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- remove whitespace on save
+cmd [[au BufWritePre * :%s/\s\+$//e]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- automatizar o :PackerCompile ------------------------------------------------------------------
-vim.cmd([[
+cmd [[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
-]])
+]]
 
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Startup ---------------------------------------------------------------------------------------
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- disable builtins plugins
+local disabled_built_ins = {
+  "netrw",
+  "netrwPlugin",
+  "netrwSettings",
+  "netrwFileHandlers",
+  "gzip",
+  "zip",
+  "zipPlugin",
+  "tar",
+  "tarPlugin",
+  "getscript",
+  "getscriptPlugin",
+  "vimball",
+  "vimballPlugin",
+  "2html_plugin",
+  "logipat",
+  "rrhelper",
+  "spellfile_plugin",
+  "matchit"
+}
 
+for _, plugin in pairs(disabled_built_ins) do
+  g["loaded_" .. plugin] = 1
+end
 
-
+-- disable nvim intro
+opt.shortmess:append "sI"

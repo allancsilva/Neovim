@@ -39,7 +39,7 @@ require('config.ui.statusline')
 -- Tools ----------------------------------------------------------------------------------------
 require('config.tools.telescope')
 require('config.tools.tree')
-require('config.tools.gitsign')
+--require('config.tools.gitsign')
 require('config.tools.treesitter')
 require('config.tools.todo')
 --require('config.tools.menu')
