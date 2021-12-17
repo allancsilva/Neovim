@@ -16,11 +16,19 @@
 -- Speed Neovim
 --require('utils.disabled')
 
--- Configuraçoes gerais
-require('plugins')
-require('options')
-require('mappings')
---require('config.core')
 
--- Projeto baseado no Nvimfy
--- Fonte : https://github.com/AyeSpacey/Nvimfy
+-- Packer
+require('settings.plugins')
+require('settings.options')
+require('settings.core')
+-- Keymap
+require('settings.mappings')
+-- LSP Config
+require('lsp')
+
+
+
+
+-- Referencias 
+-- https://github.com/AyeSpacey/Nvimfy
+-- https://github.com/crivotz/nv-ide

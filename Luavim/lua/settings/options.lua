@@ -18,15 +18,42 @@ opt.swapfile = false            -- don't use swapfile
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Cores -----------------------------------------------------------------------------------------
-cmd([[ colorscheme onedark ]])
-opt.termguicolors = true
-opt.background  = 'dark'
---require('config.ui.colors')
+--cmd([[ colorscheme onedark ]])
+require('ui.colors')
+cmd([[ colorscheme tokyonight ]])
 --cmd('colorscheme tokyonight')
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- remove line lenght marker for selected filetypes
+cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- 2 spaces for selected filetypes
+cmd [[
+  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
+]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- remove whitespace on save
+cmd [[au BufWritePre * :%s/\s\+$//e]]
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- automatizar o :PackerCompile ------------------------------------------------------------------
+cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]]
+--cmd([[ set wrap ]])
+--cmd([[ set linebreak ]])
+--cmd([[ set colorcolumn=30 ]])
 
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Definições ------------------------------------------------------------------------------------
+opt.termguicolors = true
+opt.background  = 'dark'
+
+--opt.wrap= true
+--opt.colorcolumn=30
+opt.textwidth=30
 opt.syntax  = 'on'
 opt.number  = true
 opt.cursorline  = true
@@ -36,7 +63,7 @@ opt.mouse  = 'nv'
 opt.scrolloff  = 6
 opt.sidescrolloff  = 6
 opt.laststatus = 2
-opt.updatetime = 250
+opt.updatetime = 100
 opt.ttyfast = true
 opt.showmode  = true
 opt.showcmd  = false
@@ -54,12 +81,18 @@ opt.hlsearch = false
 opt.smartcase = true
 opt.ignorecase = true
 opt.magic = true
+opt.linebreak = true
+
+
+
 opt.smartindent = true
 opt.expandtab = true
 opt.autoindent = true
 opt.tabstop = 4
-opt.softtabstop = 2
+opt.softtabstop = 4
 opt.shiftwidth = 4
+
+opt.smarttab = true
 opt.foldenable = true
 opt.foldmethod = 'syntax'
 opt.list = true
@@ -73,6 +106,9 @@ opt.hidden = true         -- enable background buffers
 opt.history = 100         -- remember n lines in history
 opt.lazyredraw = true     -- faster scrolling
 opt.synmaxcol = 240       -- max column for syntax highlight
+
+
+
 
 -- require('utils.autocmds')
 
