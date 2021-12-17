@@ -26,17 +26,15 @@ return require('packer').startup(function(use)
     return string.format("require'plugins.%s'", name)
   end
 
-  use 'wbthomason/packer.nvim'
+  use {'wbthomason/packer.nvim'}
 
 
 
   --ui
   --use 'glepnir/dashboard-nvim'
-  use 'akinsho/bufferline.nvim'
-  use 'glepnir/galaxyline.nvim'
-  use 'wfxr/code-minimap'
-  use 'wfxr/minimap.vim' --, {'do': ':!cargo install --locked code-minimap'}
-
+  use {'akinsho/bufferline.nvim'}
+  use {'glepnir/galaxyline.nvim'}
+  
 
   --tools
   use { 'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
@@ -44,35 +42,37 @@ return require('packer').startup(function(use)
     end
 }
  -- use 'kyazdani42/nvim-tree.lua'
-  use 'akinsho/toggleterm.nvim'
-  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'},
-                                                     {'kyazdani42/nvim-web-devicons'}} }
+  --use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'},
+--                                                     {'kyazdani42/nvim-web-devicons'}} }
+
+  -- Icons
+  --use { 'kyazdani42/nvim-web-devicons' }
+  use { 'ryanoasis/vim-devicons' }
 
   --syntax
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'plasticboy/vim-markdown', opt = true, ft = {'markdown'} }
+  --use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  
 
   --git
   --use 'lewis6991/gitsigns.nvim'
 
   --workspace
-  use 'Pocco81/AutoSave.nvim'
-  use 'terrortylor/nvim-comment'
-  use 'folke/todo-comments.nvim'
-
+  use {'Pocco81/AutoSave.nvim'}
+  use {'terrortylor/nvim-comment'}
+  
   --edit
-  use 'matze/vim-move'
-  use 'mg979/vim-visual-multi'
+  use {'matze/vim-move'}
+  use {'mg979/vim-visual-multi'}
 
   --enhance/optional
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'p00f/nvim-ts-rainbow'
+  --use {'lukas-reineke/indent-blankline.nvim'}
+  --use {'p00f/nvim-ts-rainbow'}
   --use 'karb94/neoscroll.nvim'
 
   --auto
-  use 'windwp/nvim-autopairs'
-  use { 'windwp/nvim-ts-autotag', ft = {'html'} }
-  use { 'AndrewRadev/tagalong.vim', ft = {'html'} }
+  --use 'windwp/nvim-autopairs'
+  --use { 'windwp/nvim-ts-autotag', ft = {'html'} }
+  --use { 'AndrewRadev/tagalong.vim', ft = {'html'} }
 
   --lsp
   --use 'neovim/nvim-lspconfig'
@@ -109,9 +109,6 @@ return require('packer').startup(function(use)
 
 
 
-
-
- use { 'wbthomason/packer.nvim' }
 
   -- LSP
   use { 'neovim/nvim-lspconfig' }
@@ -152,14 +149,12 @@ return require('packer').startup(function(use)
   use { 'mhartington/formatter.nvim', config = lua_path"formatter" }
   use { 'zdharma-continuum/zinit-vim-syntax' }
   use { 'rust-lang/rust.vim' }
+  use { 'plasticboy/vim-markdown', opt = true, ft = {'markdown'} }
 
-  -- Icons
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'ryanoasis/vim-devicons' }
 
   -- Status Line and Bufferline
-  use { 'famiu/feline.nvim', config = lua_path"feline" }
-  use { 'romgrk/barbar.nvim' }
+  --use { 'famiu/feline.nvim', config = lua_path"feline" }
+  --use { 'romgrk/barbar.nvim' }
 
   -- Telescope
   use { 'nvim-lua/popup.nvim' }
@@ -170,14 +165,12 @@ return require('packer').startup(function(use)
   use { 'pwntester/octo.nvim', config = lua_path"octo" }
 
   -- Explorer
-  use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
-
-
+  --use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
 
   -- Git
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = lua_path"gitsigns" }
-  use { 'kdheepak/lazygit.nvim' }
-  use { 'rhysd/committia.vim' }
+  --use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = lua_path"gitsigns" }
+  --use { 'kdheepak/lazygit.nvim' }
+  --use { 'rhysd/committia.vim' }
 
   -- Registers & clipboard
   use { 'tversteeg/registers.nvim' }
@@ -213,12 +206,13 @@ return require('packer').startup(function(use)
 
   -- Tmux
   use { 'christoomey/vim-tmux-navigator' }
+  use {'akinsho/toggleterm.nvim'}
 
   -- Colors
   --use 'navarasu/onedark.nvim'  
   --use { 'sainnhe/gruvbox-material' }
-  use 'norcalli/nvim-colorizer.lua'
-  use 'folke/tokyonight.nvim'  
+  use {'norcalli/nvim-colorizer.lua'}
+  use {'folke/tokyonight.nvim' } 
   use { 'lpinilla/vim-codepainter' }
 
 
@@ -233,18 +227,18 @@ return require('packer').startup(function(use)
   -- General Plugins
   use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
   use { 'airblade/vim-rooter', config = lua_path"vim-rooter" }
-  use { 'mhinz/vim-startify' }
+  --use { 'mhinz/vim-startify' }
   use { 'goolord/alpha-nvim', config = lua_path"alpha-nvim" }
   use { 'jeffkreeftmeijer/vim-numbertoggle' }
   use { 'lambdalisue/suda.vim' }
   use { 'numtostr/FTerm.nvim', config = lua_path"fterm" }
-  use { 'wfxr/minimap.vim', config = lua_path"minimap" }
+  --use { 'wfxr/minimap.vim', requires = { 'wfxr/code-minimap'},
+  config = lua_path"minimap" }
   use { 'folke/todo-comments.nvim', config = lua_path"todo-comments" }
   use { 'luukvbaal/stabilize.nvim', config = lua_path"stabilize" }
-
-
-
-
+  --use { 'wfxr/code-minimap'}
+  --use { 'wfxr/minimap.vim'}
+  --, {'do': ':!cargo install --locked code-minimap'}}
 
 end
 )
