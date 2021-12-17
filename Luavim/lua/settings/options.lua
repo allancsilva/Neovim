@@ -19,8 +19,8 @@ opt.swapfile = false            -- don't use swapfile
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Cores -----------------------------------------------------------------------------------------
 --cmd([[ colorscheme onedark ]])
-require('ui.colors')
-cmd([[ colorscheme tokyonight ]])
+--require('ui.colors')
+--cmd([[ colorscheme tokyonight ]])
 --cmd('colorscheme tokyonight')
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- remove line lenght marker for selected filetypes
