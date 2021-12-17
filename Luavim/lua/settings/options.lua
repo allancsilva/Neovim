@@ -70,7 +70,8 @@ opt.showcmd  = false
 opt.wildmenu  = true
 opt.cmdheight  = 1
 opt.timeoutlen = 200
---opt.shortmess = opt.shortmess + 'c'
+--opt.shortmess = opt.shortm
+ess + 'c'
 opt.completeopt = {'menuone', 'longest'}
 opt.pumheight = 14
 opt.pumblend = 20

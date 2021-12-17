@@ -80,23 +80,23 @@ return require('packer').startup(function(use)
   --use 'williamboman/nvim-lsp-installer'
   --use 'ray-x/lsp_signature.nvim'
 
-  --snip
-  use 'hrsh7th/vim-vsnip'
-  use 'rafamadriz/friendly-snippets'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
+  -- --snip
+  -- use 'hrsh7th/vim-vsnip'
+  -- use 'rafamadriz/friendly-snippets'
+  -- use 'saadparwaiz1/cmp_luasnip'
+  -- use 'L3MON4D3/LuaSnip'
   
 
-  -- completion
-  use { 'hrsh7th/nvim-cmp',
-        requires = {
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'hrsh7th/cmp-path'},
-          {'hrsh7th/cmp-buffer'},
-          {'hrsh7th/cmp-cmdline'},
-          {'hrsh7th/cmp-vsnip'},
-        }
-      }
+  -- -- completion
+  -- use { 'hrsh7th/nvim-cmp',
+  --       requires = {
+  --         {'hrsh7th/cmp-nvim-lsp'},
+  --         {'hrsh7th/cmp-path'},
+  --         {'hrsh7th/cmp-buffer'},
+  --         {'hrsh7th/cmp-cmdline'},
+  --         {'hrsh7th/cmp-vsnip'},
+  --       }
+  --     }
 
   --use 'hrsh7th/nvim-cmp'
   --use 'hrsh7th/cmp-nvim-lsp'

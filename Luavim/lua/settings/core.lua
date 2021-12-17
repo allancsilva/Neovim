@@ -32,8 +32,6 @@ require('autosave').setup({
   }
 })
 
-
-
 require("indent_blankline").setup {
   indentLine_enabled = 1,
   char = "|",
@@ -42,7 +40,6 @@ require("indent_blankline").setup {
   space_char_blankline = " ",
   show_current_context = true,
 }
-
 
 local g = vim.g
 
