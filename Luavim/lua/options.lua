@@ -85,10 +85,6 @@ cmd [[
   autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
 ]]
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Terminal --------------------------------------------------------------------------------------
--- open a terminal pane on the right using :Term
-cmd [[command Term :botright vsplit term://$SHELL]]
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
