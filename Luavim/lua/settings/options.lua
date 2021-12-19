@@ -17,6 +17,7 @@ opt.swapfile = false            -- don't use swapfile
 
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+<<<<<<< Updated upstream
 -- Cores -----------------------------------------------------------------------------------------
 --cmd([[ colorscheme onedark ]])
 --require('ui.colors')
@@ -47,13 +48,12 @@ cmd [[
 
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+=======
+>>>>>>> Stashed changes
 -- Definições ------------------------------------------------------------------------------------
 opt.termguicolors = true
 opt.background  = 'dark'
-
---opt.wrap= true
---opt.colorcolumn=30
-opt.textwidth=30
+opt.textwidth=40
 opt.syntax  = 'on'
 opt.number  = true
 opt.cursorline  = true
@@ -70,29 +70,18 @@ opt.showcmd  = false
 opt.wildmenu  = true
 opt.cmdheight  = 1
 opt.timeoutlen = 200
---opt.shortmess = opt.shortm
-ess + 'c'
-opt.completeopt = {'menuone', 'longest'}
-opt.pumheight = 14
-opt.pumblend = 20
-opt.winblend = 20
-opt.clipboard = {'unnamed', 'unnamedplus'}
 opt.showmatch = true
 opt.hlsearch = false
 opt.smartcase = true
 opt.ignorecase = true
 opt.magic = true
 opt.linebreak = true
-
-
-
 opt.smartindent = true
 opt.expandtab = true
 opt.autoindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-
 opt.smarttab = true
 opt.foldenable = true
 opt.foldmethod = 'syntax'
@@ -103,19 +92,26 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.undofile = true
-opt.hidden = true         -- enable background buffers
-opt.history = 100         -- remember n lines in history
-opt.lazyredraw = true     -- faster scrolling
-opt.synmaxcol = 240       -- max column for syntax highlight
+opt.hidden = true         
+opt.history = 100         
+opt.lazyredraw = true     
+opt.synmaxcol = 240       
+-- disable nvim intro
+opt.shortmess:append "sI"
 
 
-
-
--- require('utils.autocmds')
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Cores -----------------------------------------------------------------------------------------
+--cmd([[ colorscheme onedark ]])
+--require('ui.colors')
+--cmd([[ colorscheme tokyonight ]])
+--cmd('colorscheme tokyonight')
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- remove line lenght marker for selected filetypes
-cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
+cmd [[
+  autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
+]]
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- 2 spaces for selected filetypes
 cmd [[
@@ -123,7 +119,9 @@ cmd [[
 ]]
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- remove whitespace on save
-cmd [[au BufWritePre * :%s/\s\+$//e]]
+cmd [[
+  au BufWritePre * :%s/\s\+$//e
+]]
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- automatizar o :PackerCompile ------------------------------------------------------------------
 cmd [[
@@ -162,5 +160,3 @@ for _, plugin in pairs(disabled_built_ins) do
   g["loaded_" .. plugin] = 1
 end
 
--- disable nvim intro
-opt.shortmess:append "sI"
