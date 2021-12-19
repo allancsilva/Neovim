@@ -9,7 +9,7 @@ require('settings.options')
 -- LSP Config
 -- require('lsp')
 
-
+-- teste
 
 
 -- Referencias 
