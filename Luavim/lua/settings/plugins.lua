@@ -84,31 +84,8 @@ end
   use { 'dstein64/nvim-scrollview' }
   use { 'ggandor/lightspeed.nvim' }
   use { 'fedepujol/move.nvim' }
-<<<<<<< Updated upstream
 
-<<<<<<< Updated upstream
   -- -- Tim Pope docet
-  -- use { 'tpope/vim-sensible' }
-  -- use { 'tpope/vim-rails' }
-  -- use { 'tpope/vim-abolish' }
-  -- use { 'tpope/vim-surround' }
-  -- use { 'tpope/vim-bundler' }
-  -- use { 'tpope/vim-capslock' }
-  -- use { 'tpope/vim-repeat' }
-  -- use { 'tpope/vim-endwise' }
-  -- use { 'tpope/vim-rvm' }
-  -- use { 'tpope/vim-dispatch' }
-  -- use { 'tpope/vim-dadbod' }
-  -- use { 'tpope/vim-jdaddy' }
-  -- use { 'tpope/vim-fugitive' }
-  -- use { 'tpope/vim-commentary' }
-  -- use { 'github/copilot.vim', config = lua_path"copilot" }
-=======
-  -- Tim Pope docet
-=======
-  
-  -- -- Tim Pope docet
->>>>>>> Stashed changes
   use { 'tpope/vim-sensible' }
   use { 'tpope/vim-rails' }
   use { 'tpope/vim-abolish' }
@@ -123,17 +100,7 @@ end
   use { 'tpope/vim-jdaddy' }
   use { 'tpope/vim-fugitive' }
   use { 'tpope/vim-commentary' }
-<<<<<<< Updated upstream
-  use { 'github/copilot.vim', config = lua_path"copilot" }
->>>>>>> Stashed changes
 
-  -- Tmux
-  use { 'christoomey/vim-tmux-navigator' }
-  use {'akinsho/toggleterm.nvim'}
-
-=======
-  
->>>>>>> Stashed changes
   -- Colors
   use { 'norcalli/nvim-colorizer.lua' }
   use { 'folke/tokyonight.nvim' } 
