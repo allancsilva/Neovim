@@ -1,15 +1,11 @@
 
 --  init neovim
-require('settings.mappings')
-require('settings.plugins')
-require('settings.options')
 
--- require('settings.core')
--- Keymap
--- LSP Config
--- require('lsp')
+require('plugins.plugins')
+require("configs.settings")
+require('configs.mappings')
+require('plugins.utils')
 
--- teste
 
 
 -- Referencias 
