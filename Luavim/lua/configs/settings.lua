@@ -3,7 +3,7 @@
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Neovim API aliases
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- local map = vim.api.nvim_set_keymap  -- set global keymap 
+-- local map = vim.api.nvim_set_keymap  -- set global keymap
 local cmd = vim.cmd     				-- execute Vim commands
 local exec = vim.api.nvim_exec 	-- execute Vimscript
 local fn = vim.fn       				-- call Vim functions
@@ -15,125 +15,58 @@ opt.mouse = 'a'                 -- enable mouse support
 opt.clipboard = 'unnamedplus'   -- copy/paste to system clipboard
 opt.swapfile = false            -- don't use swapfile
 
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Definições ------------------------------------------------------------------------------------
-opt.termguicolors = true
-opt.background  = 'dark'
-opt.textwidth=40
-opt.syntax  = 'on'
-opt.number  = true
-opt.cursorline  = true
--- opt.ruler  = true
--- opt.wrap = false
-opt.mouse  = 'nv'
-opt.scrolloff  = 6
-opt.sidescrolloff  = 6
--- opt.laststatus = 2
--- opt.updatetime = 100
--- opt.ttyfast = true
--- opt.showmode  = true
--- opt.showcmd  = false
--- opt.wildmenu  = true
--- opt.cmdheight  = 1
--- opt.timeoutlen = 200
--- opt.showmatch = true
-opt.hlsearch = false
-opt.smartcase = true
-opt.ignorecase = true
-opt.magic = true
-opt.linebreak = true
-opt.smartindent = true
-opt.expandtab = true
-opt.autoindent = true
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.smarttab = true
--- opt.foldenable = true
--- opt.foldmethod = 'syntax'
--- opt.list = true
--- opt.listchars = {tab = '> ', trail = '°'}
--- opt.formatoptions = opt.formatoptions - 'cro'
--- opt.backup = false
--- opt.writebackup = false
--- opt.swapfile = false
--- opt.undofile = true
--- opt.hidden = true         
--- opt.history = 100         
--- opt.lazyredraw = true     
--- opt.synmaxcol = 240       
--- disable nvim intro
-opt.shortmess:append "sI"
-
-
-
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Cores -----------------------------------------------------------------------------------------
---cmd([[ colorscheme onedark ]])
---require('ui.colors')
---cmd([[ colorscheme tokyonight ]])
---cmd('colorscheme tokyonight')
-
---cmd([[ set bg=dark ]])
+-- Cores ------------------------------------------------------------------------------------
+cmd([[ set bg=dark ]])
 cmd([[ set termguicolors ]])
-vim.cmd([[
-  let g:onedark_style = 'darker'
-  colorscheme onedark
-]])
-
+cmd([[ colorscheme onedark ]])
+cmd([[ syntax on ]])
+cmd([[ set encoding=utf8 ]])
+cmd([[ set nu! ]])
+cmd([[ set mouse=a ]])
+cmd([[ set wildmenu ]])
+cmd([[ set confirm ]])
+cmd([[ set incsearch ]])
+cmd([[ set title ]])
+cmd([[ set t_Co=256 ]])
+cmd([[ set guicursor= ]])
+cmd([[ set expandtab ]])
+cmd([[ set softtabstop=4 ]])
+cmd([[ set shiftwidth=4 ]])
+cmd([[ set expandtab ]])
+cmd([[ set smarttab ]])
+cmd([[ set smartindent ]])
+cmd([[ set autoindent ]])
+cmd([[ set hidden ]])
+cmd([[ set ignorecase ]])
+cmd([[ set smartcase ]])
+cmd([[ set scrolloff=8 ]])
+cmd([[ set signcolumn=yes ]])
+cmd([[ set cmdheight=1 ]])
+cmd([[ set updatetime=100 ]])
+cmd([[ set magic ]])
+cmd([[ set showmode ]])
+cmd([[ set ttyfast ]])
+cmd([[ set nocompatible ]])
 cmd([[ let extension = expand('%:e') ]])
-
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- remove line lenght marker for selected filetypes
-cmd [[
-  autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
-]]
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- 2 spaces for selected filetypes
-cmd [[
-  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
-]]
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- remove whitespace on save
-cmd [[
-  au BufWritePre * :%s/\s\+$//e
-]]
---::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- automatizar o :PackerCompile ------------------------------------------------------------------
-cmd [[
+cmd([[ autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0 ]])
+cmd([[ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2 ]])
+cmd([[ au BufWritePre * :%s/\s\+$//e ]])
+cmd ([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
-]]
+]])
+-- cmd([[
+--   let g:onedark_style = 'darker'
+--   colorscheme onedark
+-- ]])
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Facilidades ------------------------------------------------------------------------------------
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Startup ---------------------------------------------------------------------------------------
+-- Automatizar o :PackerCompile ------------------------------------------------------------------
+
+
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- disable builtins plugins
--- local disabled_built_ins = {
---   "netrw",
---   "netrwPlugin",
---   "netrwSettings",
---   "netrwFileHandlers",
---   "gzip",
---   "zip",
---   "zipPlugin",
---   "tar",
---   "tarPlugin",
---   "getscript",
---   "getscriptPlugin",
---   "vimball",
---   "vimballPlugin",
---   "2html_plugin",
---   "logipat",
---   "rrhelper",
---   "spellfile_plugin",
---   "matchit"
--- }
-
--- for _, plugin in pairs(disabled_built_ins) do
---   g["loaded_" .. plugin] = 1
--- end
-
