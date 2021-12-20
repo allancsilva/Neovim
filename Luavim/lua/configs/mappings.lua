@@ -10,8 +10,6 @@ vim.cmd([[ nnoremap <C-q> :wq!<CR> ]])
 vim.cmd([[ inoremap <C-q> <Esc>:wq!<CR>l ]])
 vim.cmd([[ vnoremap <C-q> <Esc>:wq!<CR> ]])
 
-
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Para Salvar com 'Ctrl + s' nos modos: Normal, Inserção e Visual -------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
@@ -19,14 +17,10 @@ vim.cmd([[ nnoremap <C-s> :w<CR> ]])
 vim.cmd([[ inoremap <C-s> <Esc>:w<CR>l ]])
 vim.cmd([[ vnoremap <C-s> <Esc>:w<CR> ]])
 
-
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Para Telescope 'Ctrl + t' no modo Normal ------------------------------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd([[ nnoremap <C-t> :Telescope<CR>]])
-
-
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Para abrir o NvimTreer use 'Ctrl + b' nos modos: Normal, Inserção e Visual --------------------
@@ -35,14 +29,10 @@ vim.cmd([[ nnoremap <C-b> :NvimTreeToggle<CR> ]])
 vim.cmd([[ inoremap <C-b> <Esc>:NvimTreeToggle<CR>l ]])
 vim.cmd([[ vnoremap <C-b> <Esc>:NvimTreeToggle<CR> ]])
 
-
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Selecionar tudo com 'Ctrl + A' ---------------------------------------------------------------- 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd([[ map <C-a> ggVG ]])
-
-
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Desfazer tudo com 'Ctrl + Z' ------------------------------------------------------------------
@@ -51,16 +41,12 @@ vim.cmd([[ nnoremap <C-z> :u<CR> ]])
 vim.cmd([[ inoremap <C-z> <Esc>:u<CR>l ]])
 vim.cmd([[ vnoremap <C-z> <Esc>:u<CR> ]])
 
-
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Para Circular entre dois buffers com 'Alt + c' nos modos: Normal, Inserção e Visual -----------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd([[ nnoremap <A-c> :BufferLineCycleNext<CR> ]])
 vim.cmd([[ inoremap <A-c> <Esc>:BufferLineCycleNext<CR>l ]])
 vim.cmd([[ vnoremap <A-c> <Esc>:BufferLineCycleNext<CR> ]])
-
-
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Para ir direto ao buffers em uma posiçao 'Alt + Posiçao' nos modos: Normal, Inserção e Visual -
@@ -101,8 +87,6 @@ vim.cmd([[ nnoremap <A-9> :BufferLineGoToBuffer 9<CR> ]])
 vim.cmd([[ inoremap <A-9> <Esc>:BufferLineGoToBuffer 9<CR>l ]])
 vim.cmd([[ vnoremap <A-9> <Esc>:BufferLineGoToBuffer 9<CR> ]])
 
-
-
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Se não existir o arquivo C++ de extensão .cpp ele preenche da forma abaixo --------------------
 -- altere para sua(s) linguagens preferidas                                   --------------------
@@ -119,8 +103,6 @@ vim.cmd([[
 	endfunction
 	autocmd BufNewFile *.cpp :call AutoCpp()
 ]])
-
-
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
