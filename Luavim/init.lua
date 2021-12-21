@@ -1,10 +1,9 @@
 
 --  init neovim
 
-require('plugins.plugins')
-require('plugins.utils')
-require('plugins.lsp')
 require('configs.settings')
+require('configs.plugins')
+require('configs.core')
 require('configs.mappings')
 
 -- Referencias 

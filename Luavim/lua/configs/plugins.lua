@@ -9,8 +9,17 @@ return require('packer').startup(function()
   -- Barrinhas
   -- use 'romgrk/barbar.nvim' 
   use 'akinsho/bufferline.nvim'
-  use 'tamton-aquib/staline.nvim' 
-    
+  
+  
+  -- use 'tamton-aquib/staline.nvim' 
+  -- use 'glepnir/galaxyline.nvim'
+  
+  use 'famiu/feline.nvim'
+  use {
+	      "SmiteshP/nvim-gps",
+	      requires = "nvim-treesitter/nvim-treesitter"
+      }
+
   -- Syntax
   use 'plasticboy/vim-markdown'
   use 'numirias/semshi'
@@ -18,9 +27,9 @@ return require('packer').startup(function()
   -- Telescope
   use 'nvim-lua/popup.nvim'
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+      }
   use 'AckslD/nvim-neoclip.lua'
   use 'sharkdp/fd'
   --use { 'nvim-telescope/telescope-project.nvim' }
@@ -31,11 +40,12 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim' 
   use 'JoosepAlviste/nvim-ts-context-commentstring' 
   use 'romgrk/nvim-treesitter-context'
-  use 'SmiteshP/nvim-gps'
+  
 
   -- Nvim-tree
   use 'ryanoasis/vim-devicons' 
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons',},
+  use { 
+        'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons',},
         config = function() require'nvim-tree'.setup {} end
       }
   
@@ -71,11 +81,18 @@ return require('packer').startup(function()
   -- use { 'tpope/vim-fugitive' }
   -- use { 'tpope/vim-commentary' }
 
-  -- Colors
-  use 'navarasu/onedark.nvim' 
+  -- Cores e temas   
   use 'folke/todo-comments.nvim' 
   use 'norcalli/nvim-colorizer.lua'
   
+  use 'navarasu/onedark.nvim'
+  use 'barlog-m/oceanic-primal-vim'
+  use { 
+        'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim'
+      }
+
+
+
   -- LSP, Autocomplete e Machine Learning
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'

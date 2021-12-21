@@ -17,9 +17,26 @@ opt.swapfile = false            -- don't use swapfile
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Cores ------------------------------------------------------------------------------------
-cmd([[ set bg=dark ]])
 cmd([[ set termguicolors ]])
-cmd([[ colorscheme onedark ]])
+
+-- Tema Onedark
+-- cmd([[ colorscheme onedark ]]) cmd([[ set bg=dark ]])
+-- Tema Oceanic 
+cmd([[ colorscheme oceanic-primal ]]) cmd([[ set background=dark ]])
+
+-- -- Temas Zenbones
+-- cmd([[ colorscheme zenbones ]]) cmd([[ set background=dark ]]) 
+-- cmd([[ colorscheme zenwritten ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme neobones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme rosebones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme nordbones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme tokyobones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme duckbones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme zenburned ]]) cmd([[ set background=dark ]])
+
+-- cmd([[ colorscheme seoulbones ]]) cmd([[ set background=light ]])
+-- cmd([[ colorscheme forestbones ]]) cmd([[ set background=light ]])
+
 cmd([[ syntax on ]])
 cmd([[ set encoding=utf8 ]])
 cmd([[ set nu! ]])
@@ -58,6 +75,9 @@ cmd ([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+
+
+
 -- cmd([[
 --   let g:onedark_style = 'darker'
 --   colorscheme onedark
