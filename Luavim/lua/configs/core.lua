@@ -1,13 +1,15 @@
 
 
 -- UI
-require('plugins.utils.bufferline')
-require('plugins.utils.utils')
-require('plugins.utils.feline')
+require('plugins.plugins.utils')
+require('plugins.plugins.bufferline')
 
--- require('plugins.ui.staline.staline')
+require('plugins.plugins.galaxyline')
+require('plugins.plugins.marks')
+require('plugins.plugins.nvim-autopairs')
+require('plugins.plugins.stabilize')
+require('plugins.plugins.copilot')
 
--- require('plugins.utils.utils')
-
-require('plugins.lsp.lsp')
-
+-- require('plugins.lsp')
+require('plugins.lsp.lsp-config')
+require('plugins.lsp.cmp')

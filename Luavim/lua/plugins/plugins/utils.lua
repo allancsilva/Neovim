@@ -5,10 +5,14 @@ require'nvim-web-devicons'.get_icons()
 -- PARA O COLORIZER
 require'colorizer'.setup()
 
-
-require('nvim-autopairs').setup({
-  enable_check_bracket_line = false
+-- LSP colors
+require("lsp-colors").setup({
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
 })
+
 
 
 -- PARA AS LINHAS DE INDENTAÇÃO

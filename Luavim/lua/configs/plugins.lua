@@ -12,9 +12,9 @@ return require('packer').startup(function()
   
   
   -- use 'tamton-aquib/staline.nvim' 
-  -- use 'glepnir/galaxyline.nvim'
-  
-  use 'famiu/feline.nvim'
+  use 'glepnir/galaxyline.nvim'
+  -- use 'famiu/feline.nvim'
+
   use {
 	      "SmiteshP/nvim-gps",
 	      requires = "nvim-treesitter/nvim-treesitter"
@@ -64,6 +64,10 @@ return require('packer').startup(function()
   use 'ggandor/lightspeed.nvim' 
   use 'fedepujol/move.nvim' 
   use 'dstein64/nvim-scrollview' 
+  
+  use 'chentau/marks.nvim'
+  use 'luukvbaal/stabilize.nvim'
+
 
   -- -- -- Tim Pope docet
   -- use { 'tpope/vim-sensible' }
@@ -94,7 +98,7 @@ return require('packer').startup(function()
 
 
   -- LSP, Autocomplete e Machine Learning
-  use 'neovim/nvim-lspconfig'
+  -- use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -104,10 +108,24 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/vim-vsnip'
+  use 'folke/lsp-colors.nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'onsails/lspkind-nvim'
-  -- Caso queira tentar Tabnine requer arquivo de configuraçao
-  --use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  
+  use 'neovim/nvim-lspconfig'
+  use 'kabouzeid/nvim-lspinstall'
+  use 'williamboman/nvim-lsp-installer' 
+  use 'glepnir/lspsaga.nvim'
+  use 'hrsh7th/nvim-compe'
+
+
+
+
+  use 'github/copilot.vim'
+  -- Ver o Github do Copilot: https://github.com/github/copilot.vim
+  -- git clone https://github.com/github/copilot.vim.git \ ~/.config/nvim/pack/github/start/copilot.vim
+
+  
 
 end)
 
