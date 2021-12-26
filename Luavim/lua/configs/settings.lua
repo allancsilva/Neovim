@@ -21,17 +21,17 @@ cmd([[ set termguicolors ]])
 
 -- Tema Onedark
 -- cmd([[ colorscheme onedark ]]) cmd([[ set bg=dark ]])
--- Tema Oceanic 
-cmd([[ colorscheme oceanic-primal ]]) cmd([[ set background=dark ]])
+-- Tema Oceanic
+-- cmd([[ colorscheme oceanic-primal ]]) cmd([[ set background=dark ]])
 
 -- -- Temas Zenbones
--- cmd([[ colorscheme zenbones ]]) cmd([[ set background=dark ]]) 
+-- cmd([[ colorscheme zenbones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme zenwritten ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme neobones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme rosebones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme nordbones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme tokyobones ]]) cmd([[ set background=dark ]])
--- cmd([[ colorscheme duckbones ]]) cmd([[ set background=dark ]])
+cmd([[ colorscheme duckbones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme zenburned ]]) cmd([[ set background=dark ]])
 
 -- cmd([[ colorscheme seoulbones ]]) cmd([[ set background=light ]])

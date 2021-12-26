@@ -11,8 +11,8 @@ return require('packer').startup(function()
   use 'akinsho/bufferline.nvim'
   
   
-  -- use 'tamton-aquib/staline.nvim' 
-  use 'glepnir/galaxyline.nvim'
+  use 'tamton-aquib/staline.nvim' 
+  -- use 'glepnir/galaxyline.nvim'
   -- use 'famiu/feline.nvim'
 
   use {
@@ -70,20 +70,20 @@ return require('packer').startup(function()
 
 
   -- -- -- Tim Pope docet
-  -- use { 'tpope/vim-sensible' }
-  -- use { 'tpope/vim-rails' }
-  -- use { 'tpope/vim-abolish' }
-  -- use { 'tpope/vim-surround' }
-  -- use { 'tpope/vim-bundler' }
-  -- use { 'tpope/vim-capslock' }
-  -- use { 'tpope/vim-repeat' }
-  -- use { 'tpope/vim-endwise' }
-  -- use { 'tpope/vim-rvm' }
-  -- use { 'tpope/vim-dispatch' }
-  -- use { 'tpope/vim-dadbod' }
-  -- use { 'tpope/vim-jdaddy' }
-  -- use { 'tpope/vim-fugitive' }
-  -- use { 'tpope/vim-commentary' }
+  use { 'tpope/vim-sensible' }
+  use { 'tpope/vim-rails' }
+  use { 'tpope/vim-abolish' }
+  use { 'tpope/vim-surround' }
+  use { 'tpope/vim-bundler' }
+  use { 'tpope/vim-capslock' }
+  use { 'tpope/vim-repeat' }
+  use { 'tpope/vim-endwise' }
+  use { 'tpope/vim-rvm' }
+  use { 'tpope/vim-dispatch' }
+  use { 'tpope/vim-dadbod' }
+  use { 'tpope/vim-jdaddy' }
+  use { 'tpope/vim-fugitive' }
+  use { 'tpope/vim-commentary' }
 
   -- Cores e temas   
   use 'folke/todo-comments.nvim' 
