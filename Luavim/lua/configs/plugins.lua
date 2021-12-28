@@ -8,8 +8,8 @@ return require('packer').startup(function()
   -- Barrinhas
   -- use 'romgrk/barbar.nvim'
   use 'akinsho/bufferline.nvim'
-  use 'glepnir/spaceline.vim'
-  -- use 'tamton-aquib/staline.nvim'
+  -- use 'glepnir/spaceline.vim'
+  use 'tamton-aquib/staline.nvim'
   -- use 'glepnir/galaxyline.nvim'
   -- use 'famiu/feline.nvim'
   use {
