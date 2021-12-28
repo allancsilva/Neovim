@@ -30,7 +30,7 @@ vim.cmd([[ inoremap <C-b> <Esc>:NvimTreeToggle<CR>l ]])
 vim.cmd([[ vnoremap <C-b> <Esc>:NvimTreeToggle<CR> ]])
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Selecionar tudo com 'Ctrl + A' ---------------------------------------------------------------- 
+-- Selecionar tudo com 'Ctrl + A' ----------------------------------------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd([[ map <C-a> ggVG ]])
 
@@ -87,6 +87,16 @@ vim.cmd([[ nnoremap <A-9> :BufferLineGoToBuffer 9<CR> ]])
 vim.cmd([[ inoremap <A-9> <Esc>:BufferLineGoToBuffer 9<CR>l ]])
 vim.cmd([[ vnoremap <A-9> <Esc>:BufferLineGoToBuffer 9<CR> ]])
 
+
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+-- Terminal --------------------------------------------------------------------------------
+--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
+vim.cmd([[ nnoremap <A-t> :ToggleTerm<CR>]])
+vim.cmd([[ inoremap <A-t> <Esc>:ToggleTerm<CR> ]])
+vim.cmd([[ vnoremap <A-t> <Esc>:ToggleTerm<CR> ]])
+
+
+
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Se não existir o arquivo C++ de extensão .cpp ele preenche da forma abaixo --------------------
 -- altere para sua(s) linguagens preferidas                                   --------------------
@@ -109,6 +119,6 @@ vim.cmd([[
 -- Referencias :
 -- https://terminalroot.com.br/2021/11/instalando-plugins-tudo-sobre-neovim-com-lua.html
 -- O basico em portugues https://guialinux.uniriotec.br/vim/
--- Super completo https://devhints.io/vim 
+-- Super completo https://devhints.io/vim
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--

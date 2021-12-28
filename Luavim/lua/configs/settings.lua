@@ -23,6 +23,10 @@ cmd([[ set termguicolors ]])
 -- cmd([[ colorscheme onedark ]]) cmd([[ set bg=dark ]])
 -- Tema Oceanic
 -- cmd([[ colorscheme oceanic-primal ]]) cmd([[ set background=dark ]])
+-- Toast Theme
+-- cmd([[ colorscheme toast ]]) cmd([[ set background=light ]])
+-- GruvBox Theme
+cmd([[ colorscheme gruvbox ]]) cmd([[ set background=dark ]])
 
 -- -- Temas Zenbones
 -- cmd([[ colorscheme zenbones ]]) cmd([[ set background=dark ]])
@@ -31,11 +35,11 @@ cmd([[ set termguicolors ]])
 -- cmd([[ colorscheme rosebones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme nordbones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme tokyobones ]]) cmd([[ set background=dark ]])
-cmd([[ colorscheme duckbones ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme duckbones ]]) cmd([[ set background=dark ]])
 -- cmd([[ colorscheme zenburned ]]) cmd([[ set background=dark ]])
-
 -- cmd([[ colorscheme seoulbones ]]) cmd([[ set background=light ]])
 -- cmd([[ colorscheme forestbones ]]) cmd([[ set background=light ]])
+
 
 cmd([[ syntax on ]])
 cmd([[ set encoding=utf8 ]])
@@ -78,6 +82,13 @@ cmd ([[
 
 
 
+cmd([[
+let g:spaceline_seperate_style = 'curve'
+let g:spaceline_colorscheme = 'space'
+let g:spaceline_scroll_chars = [
+  \  ' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'
+  \  ]
+  ]])
 -- cmd([[
 --   let g:onedark_style = 'darker'
 --   colorscheme onedark
