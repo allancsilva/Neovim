@@ -5,13 +5,24 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+
   -- Barrinhas
   -- use 'romgrk/barbar.nvim'
   use 'akinsho/bufferline.nvim'
+  
+  -- use 'itchyny/lightline.vim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
   -- use 'glepnir/spaceline.vim'
-  use 'tamton-aquib/staline.nvim'
+  -- use 'tamton-aquib/staline.nvim'
   -- use 'glepnir/galaxyline.nvim'
   -- use 'famiu/feline.nvim'
+
+
   use {
 	      "SmiteshP/nvim-gps",
 	      requires = "nvim-treesitter/nvim-treesitter"
@@ -114,8 +125,12 @@ return require('packer').startup(function()
   use 'jsit/toast.vim'
   use 'navarasu/onedark.nvim'
   use 'barlog-m/oceanic-primal-vim'
+  use 'pineapplegiant/spaceduck'
   use {'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim'}
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  
+
+
   -- LSP, Autocomplete e Machine Learning
   -- use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'

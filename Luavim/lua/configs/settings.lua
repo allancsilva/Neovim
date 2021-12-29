@@ -26,7 +26,10 @@ cmd([[ set termguicolors ]])
 -- Toast Theme
 -- cmd([[ colorscheme toast ]]) cmd([[ set background=light ]])
 -- GruvBox Theme
-cmd([[ colorscheme gruvbox ]]) cmd([[ set background=dark ]])
+-- cmd([[ colorscheme gruvbox ]]) cmd([[ set background=dark ]])
+
+
+
 
 -- -- Temas Zenbones
 -- cmd([[ colorscheme zenbones ]]) cmd([[ set background=dark ]])
@@ -81,14 +84,34 @@ cmd ([[
 ]])
 
 
+cmd([[ colorscheme spaceduck ]])
 
-cmd([[
-let g:spaceline_seperate_style = 'curve'
-let g:spaceline_colorscheme = 'space'
-let g:spaceline_scroll_chars = [
-  \  ' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'
-  \  ]
-  ]])
+-- cmd([[
+
+--   if exists('+termguicolors')
+--     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+--     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+--   endif
+
+-- colorscheme spaceduck
+-- set laststatus=2
+
+-- if !has('gui_running')
+--   set t_Co=256
+-- endif
+
+-- let g:lightline = {
+--   \ 'colorscheme': 'spaceduck',
+--   \ }
+
+-- ]])
+-- cmd([[
+-- let g:spaceline_seperate_style = 'curve'
+-- let g:spaceline_colorscheme = 'space'
+-- let g:spaceline_scroll_chars = [
+--   \  ' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'
+--   \  ]
+-- ]])
 -- cmd([[
 --   let g:onedark_style = 'darker'
 --   colorscheme onedark
