@@ -84,7 +84,7 @@ cmd ([[
 ]])
 
 
-cmd([[ colorscheme spaceduck ]])
+-- cmd([[ colorscheme spaceduck ]])
 
 -- cmd([[
 

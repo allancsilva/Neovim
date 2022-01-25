@@ -29,7 +29,6 @@ return require('packer').startup(function()
       }
   -- Syntax
   use 'plasticboy/vim-markdown'
-  use 'numirias/semshi'
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
