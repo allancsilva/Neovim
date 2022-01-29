@@ -1,12 +1,24 @@
+--------------------------
+---- Init dos bons !! ---- 
+--------------------------
+local core_modules = {
+   "core.options",
+   "core.autocmds",
+   "core.mappings",
+   "core.lspConfig",
+   "core.nvimCompe",
+   "plugins",
+  
+}
 
---  init neovim
 
-require('configs.settings')
-require('configs.plugins')
-require('configs.core')
-require('configs.mappings')
+for _, module in ipairs(core_modules) do
+   local ok, err = pcall(require, module)
+   if not ok then
+      error("Error loading " .. module .. "\n\n" .. err)
+   end
+end
 
--- Referencias 
--- https://terminalroot.com.br/2021/11/do-initvim-para-o-initlua-tudo-sobre-neovim-com-lua.html
--- https://github.com/AyeSpacey/Nvimfy
--- https://github.com/crivotz/nv-ide
+
+-- "core.lspConfig",
+-- "core.nvimCompe",

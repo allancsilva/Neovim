@@ -30,7 +30,7 @@ vim.cmd([[ inoremap <C-b> <Esc>:NvimTreeToggle<CR>l ]])
 vim.cmd([[ vnoremap <C-b> <Esc>:NvimTreeToggle<CR> ]])
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Selecionar tudo com 'Ctrl + A' ---------------------------------------------------------------- 
+-- Selecionar tudo com 'Ctrl + A' ----------------------------------------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 vim.cmd([[ map <C-a> ggVG ]])
 
@@ -89,27 +89,25 @@ vim.cmd([[ vnoremap <A-9> <Esc>:BufferLineGoToBuffer 9<CR> ]])
 
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
--- Se não existir o arquivo C++ de extensão .cpp ele preenche da forma abaixo --------------------
--- altere para sua(s) linguagens preferidas                                   --------------------
+-- Terminal --------------------------------------------------------------------------------
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
-vim.cmd([[
- 	function! AutoCpp()
- 	  call append(0, '#include <iostream>')
-	  call append(1, '')
-	  call append(2, 'int main( int argc , char **argv ){')
-	  call append(3, "  std::cout << \"Olá, Mundo!\" << '\\n';")
-	  call append(4, '  return 0;')
-	  call append(5, '}')
-	  call cursor(4, 17)
-	endfunction
-	autocmd BufNewFile *.cpp :call AutoCpp()
-]])
+vim.cmd([[ nnoremap <A-t> :TZAtaraxis <CR>]])
+vim.cmd([[ inoremap <A-m> <Esc>:TZMinimalist <CR>]])
+vim.cmd([[ vnoremap <A-f> <Esc>:TZFocus <CR>]])
+
+
+-- -- truezen
+-- map("n", "<leader>ta", ":TZAtaraxis <CR>")
+-- map("n", "<leader>tm", ":TZMinimalist <CR>")
+-- map("n", "<leader>tf", ":TZFocus <CR>")
+
+
 
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 -- Referencias :
 -- https://terminalroot.com.br/2021/11/instalando-plugins-tudo-sobre-neovim-com-lua.html
 -- O basico em portugues https://guialinux.uniriotec.br/vim/
--- Super completo https://devhints.io/vim 
+-- Super completo https://devhints.io/vim
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--
 --::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--::--

@@ -6,7 +6,7 @@ require('bufferline').setup {
 
     middle_mouse_command = nil,
 
-    indicator_icon = '▎',
+    indicator_icon = '┃',
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -23,8 +23,8 @@ require('bufferline').setup {
     show_close_icon = true,
     show_tab_indicators = true,
 
-    max_name_length = 14,
-    tab_size = 14,
+    max_name_length = 16,
+    tab_size = 20,
     sort_by = 'tabs',
 
     offsets = {
