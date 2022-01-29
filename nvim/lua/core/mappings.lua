@@ -96,6 +96,37 @@ vim.cmd([[ inoremap <A-m> <Esc>:TZMinimalist <CR>]])
 vim.cmd([[ vnoremap <A-f> <Esc>:TZFocus <CR>]])
 
 
+
+
+ vim.cmd([[ nnoremap <A-j> :m .+1<CR>==]])
+
+ vim.cmd([[ nnoremap <A-k> :m .-2<CR>==]])
+
+ vim.cmd([[ inoremap <A-j> <Esc>:m .+1<CR>==gi]])
+
+ vim.cmd([[ inoremap <A-k> <Esc>:m .-2<CR>==gi]])
+
+ vim.cmd([[ vnoremap <A-j> :m '>+1<CR>gv=gv]])
+
+ vim.cmd([[ vnoremap <A-k> :m '<-2<CR>gv=gv]])
+
+
+
+
+ vim.cmd([[ 
+
+ 
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+]])
+
+
+
+
 -- -- truezen
 -- map("n", "<leader>ta", ":TZAtaraxis <CR>")
 -- map("n", "<leader>tm", ":TZMinimalist <CR>")
